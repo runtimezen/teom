@@ -2,6 +2,7 @@
   "name": "teom",
   "version": "1.0.0",
   "description": "Teom Design — minimalist design system for perfectionists.",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "turbo run build",
