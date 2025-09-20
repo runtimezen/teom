@@ -1,0 +1,7 @@
+{
+  "extends": "@repo/typescript-config/vue.json",
+  "include": ["src/**/*.ts", "src/**/*.vue"],
+  "compilerOptions": {
+    "types": ["unplugin-icons/types/vue"]
+  }
+}

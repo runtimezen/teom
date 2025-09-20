@@ -1,0 +1,54 @@
+@use "utils" as *;
+
+// LIGHT theme is defined under the :root.
+:root {
+  --color-background: hsl(0 0 100%);
+  --color-paper: hsl(0 0 96%);
+  --color-glass: hsl(0 0 96% / 50%);
+  --color-description: var(--color-disabled);
+  --color-primary: hsl(0 0 28%);
+  --color-primary-content: hsl(0 0 100%);
+  --color-primary-focus: hsl(0 0 28% / 50%);
+  --color-primary-hover: hsl(0 0 32%);
+  --color-secondary: hsl(0 0 87%);
+  --color-secondary-content: var(--color-primary);
+  --color-secondary-hover: hsl(0 0 81%);
+  --color-disabled: hsl(0 0 44%);
+  --color-disabled-content: hsl(0 0 100%);
+  --color-error: hsl(5 45% 48%);
+  --color-error-content: hsl(0 0 100%);
+  --color-error-focus: hsl(5 45% 48% / 80%);
+  --color-error-hover: hsl(5 45% 42%);
+  --color-accent: hsl(240 30% 48%);
+  --color-accent-content: hsl(0 0 100%);
+  --color-accent-focus: hsl(240 30% 42% / 80%);
+  --color-accent-hover: hsl(240 30% 42%);
+}
+
+// DARK theme is defined under the .dark custom class.
+.dark {
+  --color-background: hsl(0 0 10%);
+  --color-paper: hsl(0 0 20%);
+  --color-glass: hsl(0 0 20% / 50%);
+  --color-description: var(--color-disabled);
+  --color-primary: hsl(0 0 100%);
+  --color-primary-content: hsl(0 0 20%);
+  --color-primary-focus: hsl(0 0 100% / 50%);
+  --color-primary-hover: hsl(0 0 87%);
+  --color-secondary: hsl(0 0 28%);
+  --color-secondary-content: var(--color-primary);
+  --color-secondary-hover: hsl(0 0 35%);
+  --color-disabled: hsl(0 0 74%);
+  --color-disabled-content: hsl(0 0 20%);
+}
+
+// stylelint-disable no-duplicate-selectors 
+// -- :root is used twice in order to improve readability.
+:root {
+  color: get-color("primary");
+  background-color: get-color("background");
+  &::selection {
+    color: get-color("primary", "content");
+    background-color: get-color("primary");
+  }
+}

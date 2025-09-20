@@ -1,0 +1,66 @@
+@use "sass:list";
+@use "sass:map";
+@use "variables";
+
+// Generates the adaptive sizes (rem).
+@function get-size($value) {
+  @return $value * variables.$spacing;
+}
+
+// Implements color picking based on the current theme.
+@function get-color($color, $type: "background") {
+  @if $type == "content" or $type == "hover" or $type == "focus" {
+    @return var(--color-#{$color}-#{$type});
+  }
+  @else {
+    @return var(--color-#{$color});
+  }
+}
+
+// Returns value from variables.$rounding by name.
+// TODO: Replace the following function with the custom classes.
+@function get-radius($name) {
+  @if map.has-key(variables.$rounding, $name) {
+    @return map.get(variables.$rounding, $name);
+  }
+  @return 0;
+}
+
+// Returns value from variables.$font-size by name. 
+@function get-font-size($name) {
+  @if map.has-key(variables.$font-size, $name) {
+    @return map.get(variables.$font-size, $name);
+  }
+  @return 0;
+}
+
+// Returns value from variables.$tr-duration by name.
+@function get-transition($name) {
+  @if map.has-key(variables.$tr-duration, $name) {
+    @return map.get(variables.$tr-duration, $name);
+  }
+  @return 0;
+}
+
+// Applies backdrop-filter: blur() using the variables.$blur.
+@mixin use-blur($value: variables.$blur) {
+  backdrop-filter: blur($value);
+}
+
+// Apply GPU-accelerated visual effects.
+// Why? Modern parameters (e.g. scale:) are limited to latest versions of the popular browsers,
+// whereas scale3d(), translate3d(), etc. are widely supported.
+@mixin use-scale($values...) {
+  transform: scale3d(
+    list.nth($values, 1),
+    list.nth($values, -1),
+    1
+  );
+}
+@mixin use-translate($values...) {
+  transform: translate3d(
+    list.nth($values, 1),
+    list.nth($values, -1),
+    0
+  );
+}

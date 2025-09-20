@@ -1,0 +1,17 @@
+@use "../base/utils" as *;
+
+// Base class of the focus. Describes the initial state of the outline.
+%focus-base {
+  outline: get-size(0.5) solid transparent;
+  outline-offset: get-size(0.5);
+}
+
+// Generates custom classes for each color of the focus (outline).
+@each $color in ("primary", "accent", "error") {
+  .focus-#{$color} {
+    @extend %focus-base;
+    &:focus-visible {
+      outline-color: get-color($color, "focus"),
+    }
+  }
+}

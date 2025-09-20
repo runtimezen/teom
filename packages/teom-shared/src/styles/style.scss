@@ -1,0 +1,21 @@
+// BASE. Base styles, such as theme and CSS variables.
+// There should't be any custom classes in these files.
+@use "base/theme";
+
+// COMMON. Widely used classes, such as focus.
+// These should be utility classes that are used more than once.
+@use "common/focus";
+@use "common/fonts";
+@use "common/rounding";
+
+// COMPONENTS. Component-specific styles.
+// These should be component-specific classes.
+@use "components/button";
+@use "components/card";
+@use "components/checkbox";
+@use "components/input";
+@use "components/label";
+@use "components/number";
+@use "components/radio";
+@use "components/slider";
+@use "components/switch";

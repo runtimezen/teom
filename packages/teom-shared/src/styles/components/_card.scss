@@ -1,0 +1,15 @@
+@use "../base/utils" as *;
+
+.crd {
+  padding: get-size(3);
+  border-radius: get-radius("base");
+  font-size: get-font-size("base");
+}
+
+.crd-paper {
+  background-color: get-color("paper");
+}
+.crd-glass {
+  background-color: get-color("glass");
+  @include use-blur();
+}

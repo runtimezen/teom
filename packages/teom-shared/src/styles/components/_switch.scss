@@ -1,0 +1,51 @@
+@use "../base/utils" as *;
+
+.sch-base {
+  display: flex;
+  align-items: center;
+  border-radius: get-radius("full");
+  transition-duration: .3s
+}
+
+.sch-root {
+  height: get-size(6);
+  width: get-size(11);
+  background-color: get-color("secondary");
+  &[data-state="unchecked"]:enabled:hover {
+    background-color: get-color("secondary", "hover");
+  }
+
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+    &[data-state="checked"] {
+      background-color: get-color("disabled");
+    }
+  }
+}
+
+.sch-thumb {
+  height: get-size(4);
+  width: get-size(4);
+  border-radius: get-radius("full");
+  background-color: get-color("primary");
+  @include use-translate(get-size(1), 0);
+  &[data-state="checked"] {
+    @include use-translate(get-size(6), 0);
+    &[data-disabled] {
+      background-color: get-color("disabled", "content");
+    }
+  }
+}
+@each $color in ("primary", "accent") {
+  .sch-root-#{$color} {
+    &[data-state="checked"] {
+      background-color: get-color($color);
+    }
+  }
+  .sch-thumb-#{$color} {
+    &[data-state="checked"] {
+      background-color: get-color($color, "content");
+    }
+  }
+}

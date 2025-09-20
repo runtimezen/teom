@@ -1,0 +1,27 @@
+@use "../base/utils" as *;
+
+.nmb-root {
+  height: get-size(10);
+  display: flex;
+  align-items: center;
+  gap: get-size(1);
+  color: get-color("secondary", "content");
+  font-size: get-font-size("base");
+}
+.nmb-root > * {
+  height: 100%;
+}
+
+.nmb-input {
+  width: 100%;
+  text-align: center;
+  outline: none;
+  border-radius: get-radius("content");
+  background-color: get-color("secondary");
+}
+
+.nmb-icon {
+  & > * {
+    stroke-width: get-size(0.5);
+  }
+}

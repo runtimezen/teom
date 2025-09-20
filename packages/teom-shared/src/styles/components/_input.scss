@@ -1,0 +1,39 @@
+@use "../base/utils" as *;
+
+.ipt {
+  height: get-size(10);
+  padding: 0 get-size(3);
+  border-radius: get-radius("content");
+  color: get-color("secondary", "content");
+  background-color: get-color("secondary");
+  font-size: get-font-size("base");
+  transition-duration: get-transition("base");
+  &::placeholder {
+    color: get-color("disabled");
+  }
+}
+.ipt[type="file"] {
+  padding-left: 0;
+  &::file-selector-button {
+    height: 100%;
+    margin-right: get-size(2.5);
+    padding: 0 get-size(3);
+    border-radius: get-radius("content");
+    color: get-color("primary", "content");
+    background-color: get-color("primary");
+    transition-duration: get-transition("base");
+    cursor: pointer;
+  }
+  &:disabled::file-selector-button {
+    color: get-color("disabled", "content");
+    background-color: get-color("disabled");
+    cursor: not-allowed;
+  }
+  &:enabled:active::file-selector-button {
+    border-radius:
+      get-radius("content")
+      get-radius("base")
+      get-radius("base")
+      get-radius("content")
+  }
+}

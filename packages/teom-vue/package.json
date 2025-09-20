@@ -1,0 +1,49 @@
+{
+	"name": "@runtimezen/teom-vue",
+	"description": "Teom Vue — modern UI library.",
+	"version": "0.0.0",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		},
+		"./style.css": "./dist/style.css"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "vite build --watch",
+		"build": "pnpm run typecheck && pnpm run build:code",
+		"build:code": "vite build",
+		"typecheck": "vue-tsc -p tsconfig.json",
+		"lint:code": "eslint .",
+		"lint:code:fix": "eslint . --fix"
+	},
+	"peerDependencies": {
+		"vue": ">=3.2.0"
+	},
+	"devDependencies": {
+		"@iconify-json/line-md": "^1.2.11",
+		"@iconify-json/svg-spinners": "^1.2.4",
+		"@iconify-json/tabler": "^1.2.23",
+		"@repo/eslint-config": "workspace:*",
+		"@repo/typescript-config": "workspace:*",
+		"@runtimezen/teom-shared": "workspace:*",
+		"@types/node": "latest",
+		"@vitejs/plugin-vue": "catalog:",
+		"eslint": "catalog:",
+		"reka-ui": "^2.4.1",
+		"typescript": "catalog:",
+		"unplugin-icons": "catalog:",
+		"vite": "catalog:",
+		"vite-plugin-dts": "catalog:",
+		"vue": "catalog:",
+		"vue-tsc": "catalog:"
+	}
+}

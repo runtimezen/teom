@@ -1,0 +1,45 @@
+@use "../base/utils" as *;
+
+.rdo-root {
+  height: get-size(6);
+  width: get-size(6);
+  border-radius: 50%;
+  background-color: get-color("secondary");
+  transition-duration: get-transition("base");
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &:enabled:hover {
+    background-color: get-color("secondary", "hover");
+  }
+}
+
+.rdo-indicator {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rdo-indicator::after {
+  content: "";
+  height: get-size(4);
+  width: get-size(4);
+  display: block;
+  border-radius: 50%;
+  background-color: get-color("secondary", "content");
+}
+
+// Transitions: appear/disappear of the rdo-indicator.
+.rdo-transit-from, .rdo-transit-to {
+  opacity: 0;
+  @include use-scale(.5);
+}
+.rdo-transit-from-act {
+  transition-duration: get-transition("appear");
+}
+.rdo-transit-to-act {
+  transition-duration: get-transition("leave");
+}

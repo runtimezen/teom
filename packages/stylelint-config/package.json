@@ -1,0 +1,24 @@
+{
+  "name": "@repo/stylelint-config",
+  "description": "Stylelint configuration of the monorepo.",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/base.mjs"
+  },
+  "files": ["src"],
+  "scripts": {
+    "lint:code": "eslint .",
+    "lint:code:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:",
+    "eslint": "catalog:",
+    "stylelint": "^16.24.0",
+    "stylelint-config-recommended-scss": "^16.0.1",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-order": "^7.0.0",
+    "stylelint-scss": "^6.12.1"
+  }
+}

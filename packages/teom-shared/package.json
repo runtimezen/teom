@@ -1,0 +1,44 @@
+{
+  "name": "@runtimezen/teom-shared",
+  "description": "Teom Shared — unified composables.",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "pnpm run typecheck && pnpm run build:vite",
+    "build:vite": "vite build",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint:code": "eslint .",
+    "lint:code:fix": "eslint . --fix",
+    "lint:styles": "stylelint .",
+    "lint:styles:fix": "stylelint . --fix"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/stylelint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "clsx": "^2.1.1",
+    "esbuild": "catalog:",
+    "eslint": "catalog:",
+    "lightningcss": "^1.30.1",
+    "sass-embedded": "^1.91.0",
+    "stylelint": "^16.24.0",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  }
+}

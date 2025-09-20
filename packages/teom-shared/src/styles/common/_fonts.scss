@@ -1,0 +1,8 @@
+@use "../base/variables";
+
+// Generates custom classes for the font-size.
+@each $name, $value in variables.$font-size {
+  .fnt-#{$name} {
+    font-size: $value;
+  }
+}

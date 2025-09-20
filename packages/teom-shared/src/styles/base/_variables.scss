@@ -1,0 +1,27 @@
+// Spacing affects every adaptive size in the design system.
+// For example, width: get-size(10) generates a width based on $spacing. 
+$spacing: .25rem;
+
+// Rounding defines border-radius levels throughout the design system.
+$rounding: (
+  full: 100rem, // Used in switches. Infinity was not used for a better compatability.
+  base: 1rem, // Used in cards.
+  content: 0.5rem, // Used in buttons, inputs, checkboxes, etc.
+);
+
+// Font-sizes used throughout the design system.
+$font-size: (
+  small: 0.875rem, // Labels.
+  base: 1rem, // Simple text.
+  large: 1.5rem, // Headings.
+);
+
+// Default value for blur().
+$blur: 10px;
+
+// Default values for transition-duration.
+$tr-duration: (
+  base: .3s, // Base transitions (e.g., :hover).
+  appear: .2s, // Appear transitions.
+  leave: .1s, // Leave transitions.
+);

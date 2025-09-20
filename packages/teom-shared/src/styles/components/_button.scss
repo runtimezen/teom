@@ -1,0 +1,65 @@
+@use "../base/utils" as *;
+
+// Core styling for the Button component.
+// Defines layout, positioning and interaction.
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: get-radius("content");
+  font-size: get-font-size("base");
+  transition-duration: get-transition("base");
+  cursor: pointer;
+  &:disabled {
+    color: get-color("disabled", "content");
+    background-color: get-color("disabled");
+    cursor: not-allowed;
+  }
+  &:enabled:active {
+    border-radius: get-radius("base");
+  }
+}
+
+// Defines variants of the Button for each color, namely:
+// - PRIMARY: The preferred action, typically used for confirmations;
+// - SECONDARY: A less prominent action, often used for cancellation;
+// - ACCENT: A highlighted action, often used for creation;
+// - ERROR (formerly DESTRUCTIVE): A destructive action, such as deletion.
+@each $color in ("primary", "secondary", "accent", "error") {
+  .btn-#{$color} {
+    color: get-color($color, "content");
+    background-color: get-color($color);
+    &:enabled:hover {
+      background-color: get-color($color, "hover");
+    }
+  }
+}
+
+// Classic Button.
+// Suitable for text (e.g., "Confirm" or "Cancel").
+// +------------+
+// |    SEND    |
+// +------------+
+.btn-base {
+  height: get-size(10);
+  padding: 0 get-size(2);
+}
+// Square Button.
+// Designed for icon-only usage (e.g., theme switcher).
+// +---+
+// | @ |
+// +---+
+.btn-icon {
+  height: get-size(10);
+  width: get-size(10);
+  padding: get-size(2.5);
+  flex-shrink: 0;
+}
+
+// Button Stater.
+// This is an icon that represents the state of the stateful button.
+// It can be a spinner, a success icon, or a failure icon.
+.btn-stater {
+  height: get-size(6);
+  width: get-size(6);
+}

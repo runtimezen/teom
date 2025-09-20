@@ -1,0 +1,38 @@
+@use "../base/utils" as *;
+
+.sld-root {
+  height: get-size(6);
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  touch-action: none;
+  & * {
+    border-radius: get-radius("full");
+  }
+}
+
+.sld-track {
+  height: get-size(1.5);
+  position: relative;
+  flex-grow: 1;
+  background-color: get-color("secondary");
+}
+
+.sld-range {
+  height: 100%;
+  position: absolute;
+  background-color: get-color("accent");
+}
+
+.sld-thumb {
+  height: get-size(6);
+  width: get-size(6);
+  background-color: get-color("primary");
+  transition-duration: get-transition("base");
+  transition-property: background-color, outline-color;
+  cursor: pointer;
+  &:hover {
+    background-color: get-color("primary", "hover");
+  }
+}

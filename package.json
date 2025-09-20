@@ -1,0 +1,23 @@
+{
+  "name": "teom",
+  "version": "1.0.0",
+  "description": "Teom Design — minimalist design system for perfectionists.",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:code": "turbo run lint:code",
+    "lint:fix": "turbo run lint:fix",
+    "typecheck": "turbo run typecheck",
+    "prepare": "husky"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "turbo": "latest"
+  }
+}
