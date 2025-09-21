@@ -8,7 +8,6 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "lint:code": "turbo run lint:code",
     "lint:fix": "turbo run lint:fix",
     "typecheck": "turbo run typecheck",
     "prepare": "husky"
