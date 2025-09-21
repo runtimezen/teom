@@ -47,6 +47,7 @@ export const eslintConfig = tseslint.config(
       "@stylistic/quotes": ["error", "double"],
       "@stylistic/semi": ["error", "always"],
       "@stylistic/semi-spacing": ["error", { "before": false, "after": true }],
+      "vue/max-attributes-per-line": ["warn", { "singleline": { "max": 2 } }], 
     },
   },
 );
