@@ -5,46 +5,46 @@ export {
   type ReButtonSize,
   type ReButtonBaseProps,
   buttonVariant,
-} from "./components/button.ts";
+} from "./components/button";
 
 export {
   type ReCardMaterial,
   type ReCardBaseProps,
   cardVariant,
-} from "./components/card.ts";
+} from "./components/card";
 
 export {
   type ReCheckboxColor,
   type ReCheckboxBaseProps,
   checkboxVariant,
-} from "./components/checkbox.ts";
+} from "./components/checkbox";
 
 export {
   type ReInputColor,
   type ReInputBaseProps,
   inputVariant,
-} from "./components/input.ts";
+} from "./components/input";
 
 export {
   labelVariant,
-} from "./components/label.ts";
+} from "./components/label";
 
 export {
   numberVariant,
-} from "./components/number.ts";
+} from "./components/number";
 
 export {
   radioItemVariant,
-} from "./components/radio.ts";
+} from "./components/radio";
 
 export {
   type ReSliderColor,
   type ReSliderBaseProps,
   sliderVariant,
-} from "./components/slider.ts";
+} from "./components/slider";
 
 export {
   type ReSwitchColor,
   type ReSwitchBaseProps,
   switchVariant,
-} from "./components/switch.ts";
+} from "./components/switch";
