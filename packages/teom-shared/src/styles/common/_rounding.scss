@@ -1,8 +1,0 @@
-@use "../base/variables";
-
-// Generates custom classes for the rounding.
-@each $name, $value in variables.$rounding {
-  .rnd-#{$name} {
-    border-radius: $value;
-  }
-}
