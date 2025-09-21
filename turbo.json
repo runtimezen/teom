@@ -14,12 +14,10 @@
       "dependsOn": ["^typecheck"]
     },
     "lint:code": {
-      "dependsOn": ["^lint:code"],
-      "cache": false
+      "dependsOn": ["^lint:code"]
     },
     "lint:styles": {
-      "dependsOn": ["^lint:styles"],
-      "cache": false
+      "dependsOn": ["^lint:styles"]
     },
     "lint": {
       "dependsOn": ["lint:code", "lint:styles"]
