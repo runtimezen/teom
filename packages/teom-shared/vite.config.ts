@@ -13,7 +13,7 @@ export default defineConfig({
     }),
   ],
   build: {
-    cssMinify: false,
+    cssMinify: "lightningcss",
     emptyOutDir: true,
     lib: {
       cssFileName: "style",

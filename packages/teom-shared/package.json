@@ -32,7 +32,6 @@
     "@repo/stylelint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "clsx": "^2.1.1",
-    "esbuild": "catalog:",
     "eslint": "catalog:",
     "lightningcss": "^1.30.1",
     "sass-embedded": "^1.91.0",
