@@ -5,5 +5,9 @@
     "composite": true,
     "tsBuildInfoFile": ".tmp/tsconfig.tsbuildinfo",
     "types": ["unplugin-icons/types/vue"]
-  }
+  },
+  "references": [
+    { "path": "../../../packages/teom-shared" },
+    { "path": "../../../packages/teom-vue" }
+  ]
 }

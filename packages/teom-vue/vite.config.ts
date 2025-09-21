@@ -14,7 +14,6 @@ export default defineConfig({
     pluginIcons({ compiler: "vue3" }),
     pluginDts({
       tsconfigPath: "./tsconfig.json",
-      rollupTypes: true,
     }),
   ],
   build: {
