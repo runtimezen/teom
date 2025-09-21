@@ -5,9 +5,11 @@ pnpm-debug.log*
 
 # Build System & Dependencies
 .turbo
+.tmp
 node_modules
 dist
 *.local
+*.tsbuildinfo
 
 # Editors & Platforms
 .vscode/*
