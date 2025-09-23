@@ -5,7 +5,8 @@
     "composite": true,
     "tsBuildInfoFile": ".tmp/tsconfig.tsbuildinfo",
     "types": ["unplugin-icons/types/vue"],
-    "rootDir": "src"
+    "rootDir": "src",
+    "outDir": "dist"
   },
   "references": [
     { "path": "../teom-shared" }
