@@ -21,7 +21,7 @@
 		"dev": "vite build --watch",
 		"build": "pnpm run typecheck && pnpm run build:code",
 		"build:code": "vite build",
-		"typecheck": "vue-tsc -p tsconfig.json",
+		"typecheck": "vue-tsc -p tsconfig.json --noEmit",
 		"lint:code": "eslint .",
 		"lint:code:fix": "eslint . --fix"
 	},
