@@ -1,0 +1,6 @@
+@use "../base/utils" as *;
+@each $color in ("primary", "secondary", "accent", "error") {
+  .txt-#{$color} {
+    color: get-color($color, "text");
+  }
+}

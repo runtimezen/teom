@@ -9,7 +9,8 @@
 
 // Implements color picking based on the current theme.
 @function get-color($color, $type: "background") {
-  @if $type == "content" or $type == "hover" or $type == "focus" {
+  $available: ("content", "hover", "focus", "text");
+  @if list.index($available, $type) {
     @return var(--color-#{$color}-#{$type});
   }
   @else {

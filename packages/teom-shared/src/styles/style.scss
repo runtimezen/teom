@@ -4,6 +4,7 @@
 
 // COMMON. Widely used classes, such as focus.
 // These should be utility classes that are used more than once.
+@use "common/color";
 @use "common/focus";
 @use "common/fonts";
 
