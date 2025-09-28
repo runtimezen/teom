@@ -11,9 +11,11 @@ $rounding: (
 
 // Font-sizes used throughout the design system.
 $font-size: (
-  small: 0.875rem, // Labels.
+  huge: 2rem, // Reserved.
+  large: 1.25rem, // Headings.
   base: 1rem, // Simple text.
-  large: 1.5rem, // Headings.
+  small: 0.875rem, // Labels.
+  tiny: 0.75rem, // Reserved.
 );
 
 // Default value for blur().
