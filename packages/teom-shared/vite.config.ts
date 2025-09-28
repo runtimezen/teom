@@ -13,11 +13,15 @@ export default defineConfig({
   ],
   build: {
     cssMinify: "lightningcss",
+    cssCodeSplit: true,
     lib: {
       cssFileName: "style",
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: [
+        resolve(__dirname, "src/index.ts"),
+        resolve(__dirname, "src/styles/style.scss"),
+      ],
       formats: ["es", "cjs"],
-      fileName: "index",
+      fileName: (format, entryName) => `${entryName}.${format == "es" ? "js" : "cjs"}`,
     },
   },
 });

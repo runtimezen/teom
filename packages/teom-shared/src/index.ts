@@ -1,5 +1,3 @@
-import "./styles/style.scss";
-
 export {
   type ReButtonColor,
   type ReButtonSize,
