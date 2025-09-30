@@ -12,6 +12,7 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
+    "./themes/*": "./dist/themes/*",
     "./style.css": "./dist/style.css"
   },
   "files": [

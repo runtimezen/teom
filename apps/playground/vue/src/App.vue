@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import "virtual:uno.css";
 import "@runtimezen/teom-shared/style.css";
+import "@runtimezen/teom-shared/themes/neutral.css";
 import "@fontsource/geologica/400.css";
 
 import {

@@ -16,10 +16,11 @@ export default defineConfig({
     cssCodeSplit: true,
     lib: {
       cssFileName: "style",
-      entry: [
-        resolve(__dirname, "src/index.ts"),
-        resolve(__dirname, "src/styles/style.scss"),
-      ],
+      entry: {
+        "index": resolve(__dirname, "src/index.ts"),
+        "style": resolve(__dirname, "src/styles/style.scss"),
+        "themes/neutral": resolve(__dirname, "src/themes/neutral.scss"),
+      },
       formats: ["es", "cjs"],
       fileName: (format, entryName) => `${entryName}.${format == "es" ? "js" : "cjs"}`,
     },
