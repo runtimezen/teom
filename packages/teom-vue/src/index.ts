@@ -28,6 +28,11 @@ export {
 } from "./components/ReNumber.vue";
 
 export {
+  default as ReProgress,
+  type ReProgressProps,
+} from "./components/ReProgress.vue";
+
+export {
   default as ReRadioGroup,
   type ReRadioGroupProps,
 } from "./components/ReRadioGroup.vue";

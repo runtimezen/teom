@@ -32,6 +32,12 @@ export {
 } from "./components/number";
 
 export {
+  type ReProgressColor,
+  type ReProgressBaseProps,
+  progressVariant,
+} from "./components/progress";
+
+export {
   radioItemVariant,
 } from "./components/radio";
 

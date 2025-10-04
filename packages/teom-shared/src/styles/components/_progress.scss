@@ -1,0 +1,20 @@
+@use "../base/utils" as *;
+
+.pgs-root {
+  height: get-size(1.5);
+  position: relative;
+  overflow: hidden;
+  border-radius: get-radius("full");
+  background-color: get-color("secondary");
+}
+
+.pgs-indicator {
+  height: 100%;
+  width: 100%;
+  transition-duration: get-transition("base");
+}
+@each $color in ("primary", "accent") {
+  .pgs-#{$color} {
+    background-color: get-color($color);
+  }
+}
