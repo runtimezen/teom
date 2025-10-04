@@ -45,3 +45,8 @@ export {
   default as ReSwitch,
   type ReSwitchProps,
 } from "./components/ReSwitch.vue";
+
+export {
+  default as ReText,
+  type ReTextProps,
+} from "./components/ReText.vue";

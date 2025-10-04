@@ -46,3 +46,10 @@ export {
   type ReSwitchBaseProps,
   switchVariant,
 } from "./components/switch";
+
+export {
+  type ReTextColor,
+  type ReTextSize,
+  type ReTextBaseProps,
+  textVariant,
+} from "./components/text";
