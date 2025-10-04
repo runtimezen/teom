@@ -50,7 +50,6 @@
 // Transitions: appear/disappear of the chx-indidcator.
 .chx-transit-from, .chx-transit-to {
   opacity: 0;
-  @include use-translate(0, get-size(1))
 }
 .chx-transit-from-act {
   transition-duration: get-transition("appear");
