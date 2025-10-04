@@ -15,7 +15,7 @@ export type ReCheckboxProps = ReCheckboxBaseProps
   & CheckboxRootProps
   & /* @vue-ignore */ HTMLAttributes;
 
-const checkboxState = defineModel<boolean>();
+const value = defineModel<boolean>();
 const {
   color = "primary",
   ...props
@@ -26,7 +26,7 @@ const variant = checkboxVariant({ color });
 <template>
   <CheckboxRoot
     v-bind="props"
-    v-model="checkboxState"
+    v-model="value"
     :class="variant({ slot: 'root', classes: props.class })"
   >
     <Transition
