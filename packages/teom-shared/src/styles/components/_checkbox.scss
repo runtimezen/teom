@@ -10,7 +10,7 @@
   flex-shrink: 0;
   overflow: hidden;
   background-color: get-color("secondary");
-  transition-duration: get-transition("base");
+  transition: .2s ease-in-out;
   cursor: pointer;
   &:disabled {
     cursor: not-allowed;
@@ -52,8 +52,8 @@
   opacity: 0;
 }
 .chx-transit-from-act {
-  transition-duration: get-transition("appear");
+  transition: opacity .2s ease-out;
 }
 .chx-transit-to-act {
-  transition-duration: get-transition("leave");
+  transition: opacity .1s ease-in;
 }

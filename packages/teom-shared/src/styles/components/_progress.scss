@@ -11,7 +11,7 @@
 .pgs-indicator {
   height: 100%;
   width: 100%;
-  transition-duration: get-transition("base");
+  transition: .2s linear;
 }
 @each $color in ("primary", "accent") {
   .pgs-#{$color} {

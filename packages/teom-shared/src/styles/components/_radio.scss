@@ -5,7 +5,7 @@
   width: get-size(6);
   border-radius: 50%;
   background-color: get-color("secondary");
-  transition-duration: get-transition("base");
+  transition: .2s ease-in-out;
   cursor: pointer;
   &:disabled {
     cursor: not-allowed;
@@ -38,8 +38,8 @@
   @include use-scale(.5);
 }
 .rdo-transit-from-act {
-  transition-duration: get-transition("appear");
+  transition: transform .2s ease-out;
 }
 .rdo-transit-to-act {
-  transition-duration: get-transition("leave");
+  transition: transform .1s ease-in;
 }

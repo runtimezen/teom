@@ -20,11 +20,3 @@ $font-size: (
 
 // Default value for blur().
 $blur: 10px;
-
-// Please note, that tr-duration is deprecated and will be replaced.
-// Default values for transition-duration.
-$tr-duration: (
-  base: .2s, // Base transitions (e.g., :hover).
-  appear: .2s, // Appear transitions.
-  leave: .1s, // Leave transitions.
-);

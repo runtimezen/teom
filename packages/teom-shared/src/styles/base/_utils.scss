@@ -35,14 +35,6 @@
   @return 0;
 }
 
-// Returns value from variables.$tr-duration by name.
-@function get-transition($name) {
-  @if map.has-key(variables.$tr-duration, $name) {
-    @return map.get(variables.$tr-duration, $name);
-  }
-  @return 0;
-}
-
 // Applies backdrop-filter: blur() using the variables.$blur.
 @mixin use-blur($value: variables.$blur) {
   backdrop-filter: blur($value);

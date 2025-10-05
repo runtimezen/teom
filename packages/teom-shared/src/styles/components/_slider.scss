@@ -29,7 +29,7 @@
   height: get-size(6);
   width: get-size(6);
   background-color: get-color("primary");
-  transition-duration: get-transition("base");
+  transition: .2s ease-in-out;
   transition-property: background-color, outline-color;
   cursor: pointer;
   &:hover {
