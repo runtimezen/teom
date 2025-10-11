@@ -23,6 +23,9 @@
     background-color: get-color("primary");
     transition: .2s ease-in-out, border-radius .2s ease-out;
     cursor: pointer;
+    &:hover {
+      background-color: get-color("primary", "hover");
+    }
   }
   &:disabled::file-selector-button {
     color: get-color("disabled", "content");
