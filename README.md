@@ -1,6 +1,5 @@
 <div align=center>
   <img src="resources/banner.png" alt="Teom">
-  Minimalist design system for perfectionists.
 </div>
 
 ## 📚 Documentation
