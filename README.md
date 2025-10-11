@@ -1,8 +1,5 @@
 <div align=center>
-  <img width="160" src="resources/teom.png">
-  <h1>
-    Teom
-  </h1>
+  <img src="resources/banner.png" alt="Teom">
   Minimalist design system for perfectionists.
 </div>
 
