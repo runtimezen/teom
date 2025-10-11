@@ -14,15 +14,14 @@ To provide flexibility, the Teom source code is divided into the following parts
 - The base layer is **@runtimezen/teom-shared**, which contains reusable styles, types, and variants. If you want to use it independently, see the [integration guide](https://teom.runtimezen.ru/integration).
 - The second layer provides *framework-dependent component implementations*, such as **@runtimezen/teom-vue**, built on top of the headless libraries.
 
-## 📦 Supported Frameworks
-| Framework | Status | Base                           | Package                     |
-| --------- | :----: | :----------------------------: | --------------------------- |
-| Vue       | ✅     | [Reka UI](https://reka-ui.com) | **@runtimezen/teom-vue**    |
-| Svelte    | ⏩     | [Bits UI](https://bits-ui.com) | **@runtimezen/teom-svelte** |
-| React     | ❌     | —                              | —                           |
+## 📦 Official Support
+| Framework | Status | Base                             | Package                     |
+| --------- | :----: | :------------------------------: | --------------------------- |
+| Vue       | ✅     | [Reka UI](https://reka-ui.com)   | **@runtimezen/teom-vue**    |
+| Svelte    | ⏩     | [Bits UI](https://bits-ui.com)   | **@runtimezen/teom-svelte** |
+| React     | ⏩     | [Radix UI](https://radix-ui.com) | **@runtimezen/teom-react**  |
 
-- ✅ — Official support
-- ⚠️ — Work in progress
+- ✅ — Supported 
 - ⏩ — Planned
 - ❌ — Unavailable
 
