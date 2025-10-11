@@ -7,16 +7,16 @@ import {
   type NumberFieldRootProps,
 } from "reka-ui";
 import type { HTMLAttributes } from "vue";
+import { numberVariant } from "@runtimezen/teom-shared";
+import ReButton from "./ReButton.vue";
 import IconMinus from "~icons/tabler/minus";
 import IconPlus from "~icons/tabler/plus";
-import ReButton from "./ReButton.vue";
-import { numberVariant } from "@runtimezen/teom-shared";
 
 export type ReNumberProps = NumberFieldRootProps
   & /* @vue-ignore */ HTMLAttributes;
 
-const props = defineProps<ReNumberProps>();
 const value = defineModel<number>();
+const props = defineProps<ReNumberProps>();
 
 const variant = numberVariant();
 </script>
