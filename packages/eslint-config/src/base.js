@@ -7,14 +7,14 @@ import tseslint from "typescript-eslint";
 
 /** @type {import("eslint").Linter.Config} */
 export const eslintConfig = tseslint.config(
-  { ignores: ["*.d.ts", "**/dist"] },
+  { ignores: ["*.d.ts"] },
   {
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
       ...pluginVue.configs["flat/recommended"],
     ],
-    files: ["**/*.{js,ts,vue,mjs}"],
+    files: ["{src/**/*,*}.{js,ts,vue,mjs}"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
