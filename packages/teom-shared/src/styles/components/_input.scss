@@ -2,6 +2,7 @@
 
 .ipt {
   height: get-size(10);
+  width: 100%;
   padding: 0 get-size(3);
   border-radius: get-radius("content");
   color: get-color("secondary", "content");
