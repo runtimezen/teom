@@ -29,8 +29,9 @@
   height: get-size(6);
   width: get-size(6);
   background-color: get-color("primary");
-  transition: .2s ease-in-out;
-  transition-property: background-color, outline-color;
+  transition:
+    outline-color .1s linear,
+    background-color .2s ease-in-out;
   cursor: pointer;
   &:hover {
     background-color: get-color("primary", "hover");

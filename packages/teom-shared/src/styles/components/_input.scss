@@ -8,7 +8,7 @@
   color: get-color("secondary", "content");
   background-color: get-color("secondary");
   font-size: get-font-size("base");
-  transition: .2s ease-in-out;
+  transition: outline-color .1s linear;
   &::placeholder {
     color: get-color("disabled");
   }
@@ -22,7 +22,10 @@
     border-radius: get-radius("content");
     color: get-color("primary", "content");
     background-color: get-color("primary");
-    transition: .2s ease-in-out, border-radius .2s ease-out;
+    transition:
+      outline-color .1s linear,
+      background-color .2s ease-in-out,
+      border-radius .2s ease-out;
     cursor: pointer;
     &:hover {
       background-color: get-color("primary", "hover");

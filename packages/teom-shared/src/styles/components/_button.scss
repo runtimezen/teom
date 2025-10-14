@@ -9,7 +9,10 @@
   border: none;
   border-radius: get-radius("content");
   font-size: get-font-size("base");
-  transition: .2s ease-in-out, border-radius .2s ease-out;
+  transition:
+    outline-color .1s linear,
+    background-color .2s ease-in-out,
+    border-radius .2s ease-out;
   cursor: pointer;
   &:disabled {
     color: get-color("disabled", "content");
