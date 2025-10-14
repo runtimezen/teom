@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
   border-radius: get-radius("content");
   font-size: get-font-size("base");
   transition: .2s ease-in-out, border-radius .2s ease-out;
@@ -42,7 +43,7 @@
 // +------------+
 .btn-base {
   height: get-size(10);
-  padding: 0 get-size(2);
+  padding: 0 get-size(3.5);
 }
 // Square Button.
 // Designed for icon-only usage (e.g., theme switcher).
