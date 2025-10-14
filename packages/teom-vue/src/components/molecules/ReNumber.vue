@@ -8,7 +8,7 @@ import {
 } from "reka-ui";
 import type { HTMLAttributes } from "vue";
 import { numberVariant } from "@runtimezen/teom-shared";
-import ReButton from "./ReButton.vue";
+import ReButton from "../atoms/ReButton.vue";
 import IconMinus from "~icons/tabler/minus";
 import IconPlus from "~icons/tabler/plus";
 
