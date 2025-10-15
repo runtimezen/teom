@@ -51,5 +51,6 @@ export default {
     "no-unknown-animations": true,
     "rule-empty-line-before": null,
     "unit-no-unknown": true,
+    "selector-attribute-quotes": "never",
   },
 };
