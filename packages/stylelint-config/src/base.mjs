@@ -11,6 +11,7 @@ export default {
   rules: {
     "hue-degree-notation": "number",
     "order/properties-order": [
+      "appearance",
       "content",
       "height",
       "width",
