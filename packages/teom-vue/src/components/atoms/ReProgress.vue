@@ -1,33 +1,43 @@
 <script setup lang="ts">
-import type { ProgressRootProps } from "reka-ui";
-import { ProgressIndicator, ProgressRoot } from "reka-ui";
 import {
   progressVariant,
   type ReProgressBaseProps,
 } from "@runtimezen/teom-shared";
-import { type HTMLAttributes } from "vue";
+import { computed, type HTMLAttributes } from "vue";
 
-export type ReProgressProps = ProgressRootProps
-  & ReProgressBaseProps
+export type ReProgressProps = ReProgressBaseProps
   & /* @vue-ignore */ HTMLAttributes;
 
-const value = defineModel<number>();
 const {
   color = "primary",
+  min = 0,
+  max = 100,
+  value = 0,
   ...props
 } = defineProps<ReProgressProps>();
 const variant = progressVariant({ color });
+const indicatorWidth = computed<number>(
+  () => {
+    const result = value / (max - min) * 100;
+    if(result > max) return max;
+    if(result < min) return min;
+    return result;
+  },
+);
 </script>
 
 <template>
-  <ProgressRoot
+  <div
     v-bind="props"
-    v-model="value"
+    role="progressbar"
+    :aria-valuemax="max"
+    :aria-valuemin="min"
+    :aria-valuenow="value"
     :class="variant({ slot: 'root', classes: props.class })"
   >
-    <ProgressIndicator
+    <div
       :class="variant({ slot: 'indicator' })"
-      :style="`transform: translate3d(-${value ? 100 - value : 100}%, 0, 0)`"
+      :style="{ width: indicatorWidth + '%'}"
     />
-  </ProgressRoot>
+  </div>
 </template>

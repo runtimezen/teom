@@ -5,6 +5,9 @@ export type ReProgressColor =
   | "accent";
 export interface ReProgressBaseProps {
   color?: ReProgressColor;
+  max?: number;
+  min?: number;
+  value?: number;
 }
 
 export const progressVariant = cvp({
